@@ -1,9 +1,12 @@
 "use client";
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+import dynamic from "next/dynamic";
 
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+const Player = dynamic(
+  () => import("@lottiefiles/react-lottie-player").then((mod) => mod.Player),
+  { ssr: false }
+);
 
 import { cn } from "@/lib/utils";
 
@@ -54,15 +57,6 @@ export const BentoGridItem = ({
   spareImg?: string;
 }) => {
   const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    loop: copied,
-    autoplay: copied,
-    animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
 
   const handleCopy = () => {
     const text = "zullumsan@gmail.com";
@@ -150,7 +144,7 @@ export const BentoGridItem = ({
                   className="w-full h-full"
                   particleColor="#FFFFFF"
                 />
-                <div className="flex gap-4">
+                <div className="flex md:flex-row flex-col gap-4 items-center justify-center">
                   <a href="/Sanel_Zulic-Senior_Developer.pdf" target="_blank">
                     <div className="z-10">
                       <LitupButton name="View Resume" />
@@ -171,7 +165,12 @@ export const BentoGridItem = ({
                     copied ? "block" : "block"
                   }`}
                 >
-                  <Lottie options={defaultOptions} height={200} width={400} />
+                  <Player
+                    autoplay={copied}
+                    loop={copied}
+                    src={animationData}
+                    style={{ height: "200px", width: "400px" }}
+                  />
                 </div>
 
                 <MagicButton
