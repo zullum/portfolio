@@ -133,15 +133,17 @@ export function Globe({ globeConfig, data }: WorldProps) {
     let points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
-      const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
-      // Ensure all coordinates are valid numbers
+      const rgb = hexToRgb(arc.color);
+      
+      // Ensure all coordinates are valid numbers and rgb conversion succeeded
       if (
+        !rgb ||
         isNaN(arc.startLat) ||
         isNaN(arc.startLng) ||
         isNaN(arc.endLat) ||
         isNaN(arc.endLng)
       ) {
-        console.error("Invalid coordinates for data point:", arc);
+        console.error("Invalid coordinates or color for data point:", arc);
         continue; // Skip this invalid point
       }
       points.push({
@@ -211,13 +213,12 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcDashAnimateTime(() => defaultProps.arcTime);
 
     globeRef.current
-      .pointsData(data)
-      .pointRadius((e) => (e as { size: number }).size * 2) // added
-      .pointColor((e) => (e as { color: string }).color)
+      .pointsData(globeData)
+      .pointRadius(0.8)
+      .pointColor((e) => (e as { color: (t: number) => string }).color(0))
       .pointsMerge(true)
-      .pointAltitude(0.0)
-      .pointRadius(2)
-      .pointsTransitionDuration(0); // added
+      .pointAltitude(0.01)
+      .pointsTransitionDuration(0);
 
     globeRef.current
       .ringsData([])
@@ -236,14 +237,14 @@ export function Globe({ globeConfig, data }: WorldProps) {
       if (!globeRef.current || !globeData) return;
       numbersOfRings = genRandomNumbers(
         0,
-        data.length,
-        Math.floor((data.length * 4) / 5)
+        globeData.length,
+        Math.floor((globeData.length * 2) / 5)
       );
 
       globeRef.current.ringsData(
         globeData.filter((_d, i) => numbersOfRings.includes(i))
       );
-    }, 2000);
+    }, 1500);
 
     return () => {
       clearInterval(interval);
