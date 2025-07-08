@@ -50,24 +50,24 @@ const Hero = () => {
       <div className="flex justify-center relative my-20-z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <img
-            src="/dp.jpg"
+            src="/profile.jpg"
             alt="profile-pic"
-            className="rounded-full w-80 h-80 border-2 border-white-100 mb-5"
+            className="rounded-full w-80 h-80 border-2 border-white-100 mb-5 object-cover"
           />
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Akash Jana
+            Sanel Zulic
           </h2>
           <TypewriterEffect
             className="text-center md:text-5xl lg:text-6xl my-5"
             words={words}
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m Akash, a proficient Web Developer and AI Enthusiast.
+            Hi, I&apos;m Sanel, a Senior Developer and Front-end Specialist.
           </p>
 
-          <a href="https://contra.com/akash_jana" target="_blank" className="cursor-pointer">
+          <a href="#projects">
             <MagicButton
-              title="Hire me on Contra"
+              title="See my work"
               icon={<FaLocationArrow />}
               position="right"
             />

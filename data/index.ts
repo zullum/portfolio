@@ -1,16 +1,14 @@
 export const navItems = [
     { name: "About", link: "#about" },
-    // { name: "Resume", link: "https://drive.google.com/file/d/1udileHqcrbD09gjuFpUZlHgpOajw3UU_/view?usp=sharing" },
+    { name: "Resume", link: "/Sanel_Zulic-Senior_Developer.pdf" },
     { name: "Projects", link: "#projects" },
-    //{ name: "Testimonials", link: "#testimonials" },
-    { name: "Blogs", link: "https://dev.to/akashjana"},
     { name: "Contact", link: "#contact" },
   ];
   
   export const gridItems = [
     {
       id: 1,
-      title: "I prioritize team/client collaboration, fostering open communication ",
+      title: "A Front-end developer with 9.5 years of experience in React.js, PHP, JavaScript, Python and Java.",
       description: "",
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
@@ -30,11 +28,11 @@ export const navItems = [
     },
     {
       id: 3,
-      title: "Hire me",
-      description: "Are you hiring? Check out ",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-2 flex",
+      title: "My tech stack",
+      description: "I constantly try to improve",
+      className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
-      titleClassName: "justify-end",
+      titleClassName: "justify-center",
       img: "",
       spareImg: "",
     },
@@ -51,8 +49,8 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Clean Code and Modern Design",
-      description: "Passionate about transforming ideas into reality.",
+      title: "Currently working on scanning software and web applications",
+      description: "The Inside Scoop",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
       titleClassName: "justify-center md:justify-start lg:justify-center",
@@ -74,71 +72,39 @@ export const navItems = [
   export const projects = [
         {
       id: 1,
-      title: "CopilotMate",
-      des: "CopilotMate is an open-source personal assistant designed to streamline productivity with an intuitive interface and a suite of essential tools.",
-      img: "/copilotmate.png",
-      iconLists: ["/next.svg",  "/tail.svg", "/ts.svg", "/fm.svg"],
-      link: "https://youtu.be/qPVRPUH8ewU?si=PmCxfpnI30lgJRd0",
+      title: "App Compatibility Tool",
+      des: "Created a new website from scratch using React for frontend and NodeJS for backend that displays a dashboard with AI-processed data about software compatibility with new computer chips.",
+      img: "/p1.png",
+      iconLists: ["/re.svg", "/ts.svg", "/tail.svg", "/nodejs.svg", "/express.svg", "/dynamodb.svg", "/aws.svg"],
+      link: "https://github.com/zullum",
     },
     {
       id: 2,
-      title: "Statify - Landing page",
-      des: "A modern and minimal lading page with excellent UI/UX.",
-      img: "/statify.png",
-      iconLists: ["/next.svg","/re.svg", "/tail.svg", "/ts.svg"],
-      link: "https://statify-delta-mauve.vercel.app/",
+      title: "ASCAP Mobile App",
+      des: "Created new earnings and analytics features in an existing mobile application built with React Native, enhancing user experience for publishers and artists.",
+      img: "/p2.png",
+      iconLists: ["/re.svg", "/ts.svg", "/tail.svg", "/concourse.svg", "/jira.svg", "/bitbucket.svg"],
+      link: "https://github.com/zullum",
     },
     {
       id: 3,
-      title: "Cryptack - Cryptocurrency tracker",
-      des: "Compare different cryptocurrencies, view their graphs—prices, total volumes, market cap, etc.",
-      img: "/p2.png",
-      iconLists: ["/re.svg", "/css.svg", "/js.svg", "/chartjs.svg", "/fm.svg", "/mui.svg"],
-      link: "cryptack.netlify.app/",
+      title: "Classcraft",
+      des: "Created new grouping features allowing teachers to create random and dynamic groups of students based on their performance in an online education platform.",
+      img: "/p3.svg",
+      iconLists: ["/re.svg", "/ts.svg", "/tail.svg", "/concourse.svg", "/jira.svg"],
+      link: "https://github.com/zullum",
     },
-  
     {
       id: 4,
-      title: "Mystery Message",
-      des: "Mystery Message allows users to send and receive anonymous messages, ensuring privacy and fostering honest communication without revealing identities.",
-      img: "/p1.png",
-      iconLists: ["/next.svg","/re.svg", "/tail.svg", "/ts.svg","/mongo.svg"],
-      link: "github.com/AkashJana18/nextjs-project",
+      title: "Crafter Tool",
+      des: "Developed a content editor tool that enables content authors to update existing eBooks, with features for modifying, hiding, and deleting content sections.",
+      img: "/p4.png",
+      iconLists: ["/re.svg", "/js.svg", "/tail.svg", "/xhtml.svg", "/jira.svg", "/aws.svg"],
+      link: "https://github.com/zullum",
     },
   ];
   
-  export const testimonials = [
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-    {
-      quote:
-        "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-      name: "Michael Johnson",
-      title: "Director of AlphaStream Technologies",
-    },
-  ];
+  export const testimonials = [];
   
   export const companies = [
     {
@@ -176,29 +142,29 @@ export const navItems = [
   export const workExperience = [
     {
       id: 1,
-      title: "Pretember Challenge",
-      desc: "Developed CopilotMate, personal AI assistant which integrates tools like a to-do list, ai-enabled spreadsheet, expense tracker and other features.",
+      title: "Senior Frontend Developer",
+      desc: "Working on scanning software and web applications using React, NodeJS and AWS.",
       className: "md:col-span-2",
       thumbnail: "/exp1.svg",
     },
     {
       id: 2,
-      title: "Open Source",
-      desc: "Developed a JSON Field Renaming Component in Golang for Instill AI, implementing logic for renaming fields with conflict resolution. Additionally, created comprehensive unit tests to ensure its functionality and robustness",
+      title: "Mobile Developer",
+      desc: "Experience with React Native for mobile application development.",
       className: "md:col-span-2",
       thumbnail: "/exp2.svg",
     },
     {
       id: 3,
-      title: "Freelance Project",
-      desc: "Developed a web application for a client, handling both design and implementation using React.",
+      title: "Online Education",
+      desc: "2.5 years as senior frontend developer on platforms for online education.",
       className: "md:col-span-2",
       thumbnail: "/exp3.svg",
     },
     {
       id: 4,
-      title: "Team Led",
-      desc: "Led a team of students in creating a project for a hackathon, focusing on frontend development and project management.",
+      title: "Backend Developer",
+      desc: "A Front-end developer with 9.5 years of experience in React.js, PHP, JavaScript, Python and Java.",
       className: "md:col-span-2",
       thumbnail: "/exp4.svg",
     },
@@ -209,16 +175,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
-      href: "https://github.com/AkashJana18",
+      href: "https://github.com/zullum",
     },
     {
       id: 2,
       img: "/twit.svg",
-      href: "https://x.com/Akashj_01",
+      href: "https://x.com/zullumai",
     },
     {
       id: 3,
       img: "/link.svg",
-      href: "https://www.linkedin.com/in/akashjana",
+      href: "https://www.linkedin.com/in/sanelzulic",
     },
   ];

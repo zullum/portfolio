@@ -65,7 +65,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "akashjana663@gmail.com";
+    const text = "zullumsan@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -151,15 +151,12 @@ export const BentoGridItem = ({
                   particleColor="#FFFFFF"
                 />
                 <div className="flex gap-4">
-                  <a
-                    href="https://drive.google.com/file/d/1udileHqcrbD09gjuFpUZlHgpOajw3UU_/view?usp=sharing"
-                    target="_blank"
-                  >
+                  <a href="/Sanel_Zulic-Senior_Developer.pdf" target="_blank">
                     <div className="z-10">
                       <LitupButton name="View Resume" />
                     </div>
                   </a>
-                  <a href="https://contra.com/akash_jana" target="_blank">
+                  <a href="https://contra.com/sanel_zulic_3yrxc05j" target="_blank">
                     <div className="z-10">
                       <LitupButton name="Freelance" />
                     </div>
