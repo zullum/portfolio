@@ -8,7 +8,7 @@ import Image from "next/image";
 const Hero = () => {
   const words = [
     "I Build High-performance Web Applications",
-    "10+ Years Experience, Still Not Burned Out",
+    "10+ Years of Experience, Still Not Burned Out",
     "I Center Divs on the First Try",
     "Turning Coffee into Clean Code",
   ];

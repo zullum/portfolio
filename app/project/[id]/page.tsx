@@ -19,7 +19,7 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
 
   return (
     <div className="min-h-screen bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5 relative">
-      <div className="max-w-7xl w-full pt-36 pb-20">
+      <div className="max-w-7xl w-full pt-4 pb-20">
         <Link href="/#projects" className="inline-block mb-10">
           <MagicButton
             title="Back to Projects"
