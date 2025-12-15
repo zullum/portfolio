@@ -2,27 +2,15 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./ui/MagicButton";
 import { Spotlight } from "./ui/Spotlight";
-import { TypewriterEffect } from "./ui/TypewriterEffect";
+import { InfiniteTypewriter } from "./ui/InfiniteTypewriter";
+import Image from "next/image";
 
 const Hero = () => {
   const words = [
-    {
-      text: "I",
-    },
-    {
-      text: "Build",
-    },
-    {
-      text: "High-performance",
-    },
-    {
-      text: "Web",
-      className: "text-purple dark:text-purple",
-    },
-    {
-      text: "Applications",
-      className: "text-purple dark:text-purple",
-    },
+    "I Build High-performance Web Applications",
+    "10+ Years Experience, Still Not Burned Out",
+    "I Center Divs on the First Try",
+    "Turning Coffee into Clean Code",
   ];
 
   return (
@@ -49,20 +37,22 @@ const Hero = () => {
 
       <div className="flex justify-center relative my-20-z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <img
+          <Image
             src="/profile.jpg"
             alt="profile-pic"
             className="rounded-full w-80 h-80 border-2 border-white-100 mb-5 object-cover"
+            width={320}
+            height={320}
           />
           <h2 className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
             Sanel Zulic
           </h2>
-          <TypewriterEffect
+          <InfiniteTypewriter
             className="text-center md:text-5xl lg:text-6xl my-5"
             words={words}
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m Sanel, a Senior Developer and Front-end Specialist.
+            Hi, I&apos;m Sanel, a Senior Full Stack Developer.
           </p>
 
           <a href="#projects">

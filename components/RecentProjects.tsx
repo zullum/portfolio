@@ -1,4 +1,5 @@
-"use client";
+import Link from "next/link";
+import Image from "next/image";
 import { projects } from "@/data";
 import React from "react";
 import { PinContainer } from "./ui/PinContainer";
@@ -18,15 +19,21 @@ const RecentProjects = () => {
             key={id}
             className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
           >
-            <PinContainer title={link} href={link} >
+            <PinContainer title="View Project" href={link}>
               <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <Image src="/bg.png" alt="bgimg" fill className="object-cover" />
                 </div>
-                <img src={img} alt="cover" className="z-10 absolute bottom-0" />
+                <Image
+                  src={img}
+                  alt="cover"
+                  width={500}
+                  height={300}
+                  className="z-10 absolute bottom-0 object-contain h-full w-full p-4"
+                />
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -48,12 +55,12 @@ const RecentProjects = () => {
                   {iconLists.map((icon, index) => (
                     <div
                       key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center relative"
                       style={{
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <Image src={icon} alt="icon" width={32} height={32} className="p-2" />
                     </div>
                   ))}
                 </div>

@@ -145,12 +145,18 @@ export const BentoGridItem = ({
                   particleColor="#FFFFFF"
                 />
                 <div className="flex md:flex-row flex-col gap-4 items-center justify-center">
-                  <a href="/Sanel_Zulic-Senior_Developer.pdf" target="_blank">
+                  <a
+                    href="/Sanel_Zulic_Fullstack_Developer_CV.pdf"
+                    target="_blank"
+                  >
                     <div className="z-10">
                       <LitupButton name="View Resume" />
                     </div>
                   </a>
-                  <a href="https://contra.com/sanel_zulic_3yrxc05j" target="_blank">
+                  <a
+                    href="https://contra.com/sanel_zulic_3yrxc05j"
+                    target="_blank"
+                  >
                     <div className="z-10">
                       <LitupButton name="Freelance" />
                     </div>

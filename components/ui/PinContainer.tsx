@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export const PinContainer = ({
   children,
@@ -17,6 +18,7 @@ export const PinContainer = ({
   className?: string;
   containerClassName?: string;
 }) => {
+  const router = useRouter();
   const [transform, setTransform] = useState(
     "translate(-50%,-50%) rotateX(0deg)"
   );
@@ -36,10 +38,14 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      //href={href || "/"}
       onClick={(event) => {
-        event.preventDefault();
-        window.open(href || "/", "_blank");
+        if (href && !href.startsWith("http")) {
+          event.preventDefault();
+          router.push(href);
+        } else {
+          event.preventDefault();
+          window.open(href || "/", "_blank");
+        }
       }}
     >
       <div
